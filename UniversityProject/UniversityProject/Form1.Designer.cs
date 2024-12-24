@@ -36,118 +36,138 @@
             label6 = new Label();
             label7 = new Label();
             dayContainer = new FlowLayoutPanel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(339, 0);
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            label1.Font = new Font("Georgia", 13.8F);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(22, 72);
+            label1.Margin = new Padding(10, 0, 10, 0);
+            label1.MaximumSize = new Size(129, 35);
+            label1.MinimumSize = new Size(129, 35);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(129, 35);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "Monday";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(283, 0);
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            label2.Font = new Font("Georgia", 13.8F);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(171, 72);
+            label2.Margin = new Padding(10, 0, 10, 0);
+            label2.MaximumSize = new Size(129, 35);
+            label2.MinimumSize = new Size(129, 35);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(129, 35);
             label2.TabIndex = 1;
-            label2.Text = "label2";
+            label2.Text = "Tuesday";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(227, 0);
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            label3.Font = new Font("Georgia", 13.8F);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(320, 72);
+            label3.Margin = new Padding(10, 0, 10, 0);
+            label3.MaximumSize = new Size(129, 35);
+            label3.MinimumSize = new Size(129, 35);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(129, 35);
             label3.TabIndex = 2;
-            label3.Text = "label3";
+            label3.Text = "Wednesday";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(171, 0);
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            label4.Font = new Font("Georgia", 13.8F);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(469, 72);
+            label4.Margin = new Padding(10, 0, 10, 0);
+            label4.MaximumSize = new Size(129, 35);
+            label4.MinimumSize = new Size(129, 35);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(129, 35);
             label4.TabIndex = 3;
-            label4.Text = "label4";
+            label4.Text = "Thursday";
             label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(115, 0);
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            label5.Font = new Font("Georgia", 13.8F);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(618, 72);
+            label5.Margin = new Padding(10, 0, 10, 0);
+            label5.MaximumSize = new Size(129, 35);
+            label5.MinimumSize = new Size(129, 35);
             label5.Name = "label5";
-            label5.Size = new Size(50, 20);
+            label5.Size = new Size(129, 35);
             label5.TabIndex = 4;
-            label5.Text = "label5";
+            label5.Text = "Friday";
             label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(59, 0);
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            label6.Font = new Font("Georgia", 13.8F);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(767, 72);
+            label6.Margin = new Padding(10, 0, 10, 0);
+            label6.MaximumSize = new Size(129, 35);
+            label6.MinimumSize = new Size(129, 35);
             label6.Name = "label6";
-            label6.Size = new Size(50, 20);
+            label6.Size = new Size(129, 35);
             label6.TabIndex = 5;
-            label6.Text = "label6";
+            label6.Text = "Saturday";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(3, 0);
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            label7.Font = new Font("Georgia", 13.8F);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(916, 72);
+            label7.Margin = new Padding(10, 0, 10, 0);
+            label7.MaximumSize = new Size(129, 35);
+            label7.MinimumSize = new Size(129, 35);
             label7.Name = "label7";
-            label7.Size = new Size(50, 20);
+            label7.Size = new Size(129, 35);
             label7.TabIndex = 6;
-            label7.Text = "label7";
+            label7.Text = "Sunday";
             label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // dayContainer
             // 
-            dayContainer.Location = new Point(0, 105);
-            dayContainer.MinimumSize = new Size(1261, 615);
+            dayContainer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            dayContainer.Location = new Point(12, 121);
             dayContainer.Name = "dayContainer";
-            dayContainer.Size = new Size(1299, 749);
+            dayContainer.Size = new Size(1047, 534);
             dayContainer.TabIndex = 7;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            flowLayoutPanel1.Controls.Add(label7);
-            flowLayoutPanel1.Controls.Add(label6);
-            flowLayoutPanel1.Controls.Add(label5);
-            flowLayoutPanel1.Controls.Add(label4);
-            flowLayoutPanel1.Controls.Add(label3);
-            flowLayoutPanel1.Controls.Add(label2);
-            flowLayoutPanel1.Controls.Add(label1);
-            flowLayoutPanel1.Location = new Point(453, 12);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(422, 87);
-            flowLayoutPanel1.TabIndex = 8;
-            flowLayoutPanel1.WrapContents = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1299, 866);
-            Controls.Add(flowLayoutPanel1);
+            BackColor = Color.FromArgb(25, 25, 26);
+            ClientSize = new Size(1071, 741);
+            Controls.Add(label1);
+            Controls.Add(label7);
             Controls.Add(dayContainer);
+            Controls.Add(label2);
+            Controls.Add(label3);
+            Controls.Add(label6);
+            Controls.Add(label4);
+            Controls.Add(label5);
             Name = "Form1";
             Text = "Event Planner";
             Load += Form1_Load;
-            flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -161,6 +181,5 @@
         private Label label6;
         private Label label7;
         private FlowLayoutPanel dayContainer;
-        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

@@ -23,7 +23,7 @@ namespace UniversityProject
 
             var daysInMonth = DateTime.DaysInMonth(year, month);
 
-            var numDay = int.Parse(firstDayOfTheMonth.DayOfWeek.ToString("d")) + 1;
+            var numDay = int.Parse(firstDayOfTheMonth.DayOfWeek.ToString("d")) + 7;
 
             for (var i = 1; i < numDay; i++)
             {

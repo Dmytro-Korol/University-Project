@@ -35,6 +35,7 @@
             // labelDay
             // 
             labelDay.AutoSize = true;
+            labelDay.ForeColor = Color.White;
             labelDay.Location = new Point(19, 19);
             labelDay.Name = "labelDay";
             labelDay.Size = new Size(25, 20);
@@ -53,11 +54,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.FromArgb(83, 81, 79);
             Controls.Add(label1);
             Controls.Add(labelDay);
+            Margin = new Padding(10);
             Name = "DaysUserControl";
-            Size = new Size(186, 116);
+            Size = new Size(129, 91);
             Load += DaysUserControl_Load;
             Click += DaysUserControl_Click;
             ResumeLayout(false);
