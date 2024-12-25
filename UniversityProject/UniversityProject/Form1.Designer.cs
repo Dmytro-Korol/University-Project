@@ -36,6 +36,9 @@
             label6 = new Label();
             label7 = new Label();
             dayContainer = new FlowLayoutPanel();
+            nextPageButton = new Button();
+            prevPageButton = new Button();
+            monthYearLabel = new Label();
             SuspendLayout();
             // 
             // label1
@@ -151,12 +154,50 @@
             dayContainer.Size = new Size(1047, 534);
             dayContainer.TabIndex = 7;
             // 
+            // nextPageButton
+            // 
+            nextPageButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            nextPageButton.Location = new Point(965, 700);
+            nextPageButton.Name = "nextPageButton";
+            nextPageButton.Size = new Size(94, 29);
+            nextPageButton.TabIndex = 8;
+            nextPageButton.Text = "Next";
+            nextPageButton.UseVisualStyleBackColor = true;
+            nextPageButton.Click += nextPageButton_Click;
+            // 
+            // prevPageButton
+            // 
+            prevPageButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            prevPageButton.Location = new Point(839, 700);
+            prevPageButton.Name = "prevPageButton";
+            prevPageButton.Size = new Size(94, 29);
+            prevPageButton.TabIndex = 9;
+            prevPageButton.Text = "Previous";
+            prevPageButton.UseVisualStyleBackColor = true;
+            prevPageButton.Click += prevPageButton_Click;
+            // 
+            // monthYearLabel
+            // 
+            monthYearLabel.Dock = DockStyle.Top;
+            monthYearLabel.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            monthYearLabel.ForeColor = Color.White;
+            monthYearLabel.Location = new Point(0, 0);
+            monthYearLabel.Margin = new Padding(10, 0, 10, 0);
+            monthYearLabel.Name = "monthYearLabel";
+            monthYearLabel.Size = new Size(1071, 46);
+            monthYearLabel.TabIndex = 10;
+            monthYearLabel.Text = "Month Year";
+            monthYearLabel.TextAlign = ContentAlignment.BottomCenter;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
             ClientSize = new Size(1071, 741);
+            Controls.Add(monthYearLabel);
+            Controls.Add(prevPageButton);
+            Controls.Add(nextPageButton);
             Controls.Add(label1);
             Controls.Add(label7);
             Controls.Add(dayContainer);
@@ -181,5 +222,8 @@
         private Label label6;
         private Label label7;
         private FlowLayoutPanel dayContainer;
+        private Button nextPageButton;
+        private Button prevPageButton;
+        private Label monthYearLabel;
     }
 }
