@@ -1,4 +1,7 @@
+using System;
 using System.Globalization;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace UniversityProject
 {
@@ -7,6 +10,8 @@ namespace UniversityProject
         public Form1()
         {
             InitializeComponent();
+
+            SetAdaptiveMinimumSize();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -16,11 +21,14 @@ namespace UniversityProject
 
         int year = DateTime.Now.Year;
         int month = DateTime.Now.Month;
+
         private void DisplayDays()
         {
             //var date = DateTime.Now;
 
-            var monthName = DateTimeFormatInfo.CurrentInfo.MonthNames[month-1];
+            CultureInfo englishCulture = new CultureInfo("en-US");
+            var monthName = englishCulture.DateTimeFormat.MonthNames[month - 1];
+
             monthYearLabel.Text = monthName + " " + year;
 
             var firstDayOfTheMonth = new DateTime(year, month, 1);
@@ -57,6 +65,16 @@ namespace UniversityProject
             month--;
             if (month < 1) { year--; month = 12; }
             DisplayDays();
+        }
+
+        private void SetAdaptiveMinimumSize()
+        {
+            Rectangle screenBounds = Screen.PrimaryScreen.Bounds;
+
+            int minWidth = Math.Max((int)(screenBounds.Width * 0.5), 800);  
+            int minHeight = Math.Max((int)(screenBounds.Height * 0.5), 600); 
+
+            this.MinimumSize = new Size(minWidth, minHeight);
         }
     }
 }
