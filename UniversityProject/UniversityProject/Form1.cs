@@ -11,7 +11,7 @@ namespace UniversityProject
         {
             InitializeComponent();
 
-            SetAdaptiveMinimumSize();
+            //SetAdaptiveMinimumSize();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -71,8 +71,8 @@ namespace UniversityProject
         {
             Rectangle screenBounds = Screen.PrimaryScreen.Bounds;
 
-            int minWidth = Math.Max((int)(screenBounds.Width * 0.5), 800);  
-            int minHeight = Math.Max((int)(screenBounds.Height * 0.5), 600); 
+            int minWidth = Math.Max((int)(screenBounds.Width), 800);  
+            int minHeight = Math.Max((int)(screenBounds.Height), 600); 
 
             this.MinimumSize = new Size(minWidth, minHeight);
         }
