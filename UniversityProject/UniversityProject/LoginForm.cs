@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UniversityProject
 {
-    public partial class RegistrationForm : Form
+    public partial class LoginForm : Form
     {
-        public RegistrationForm()
+        public LoginForm()
         {
             InitializeComponent();
 
