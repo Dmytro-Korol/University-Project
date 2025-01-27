@@ -18,5 +18,13 @@ namespace UniversityProject
 
 
         }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+            if(PasswordTextBox.Text != ConfirmPasswordTextBox.Text)
+            {
+
+            }
+        }
     }
 }
