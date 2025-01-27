@@ -16,8 +16,9 @@ namespace UniversityProject
         public EventPlanner()
         {
             InitializeComponent();
-            date = 
-            dateLabel.Text = 
+            DaysUserControl dayControl = new DaysUserControl();
+            date = dayControl.Date();
+            dateLabel.Text = date.ToString();
         }
     }
 }

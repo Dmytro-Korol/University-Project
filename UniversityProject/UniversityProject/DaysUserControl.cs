@@ -27,12 +27,18 @@ namespace UniversityProject
         {
             date = ran;
             labelDay.Text = numOfDay.ToString();
-            
+        }
+
+        public DateTime Date()
+        {
+            return date;
         }
 
         private void DaysUserControl_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{date}");
+            //MessageBox.Show($"{date}");
+            EventPlanner eventPlanner = new EventPlanner();
+            eventPlanner.ShowDialog();
         }
     }
 }
