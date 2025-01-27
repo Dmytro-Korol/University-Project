@@ -21,5 +21,13 @@ namespace UniversityProject
             this.usernameTextBox.Size = new Size(this.usernameTextBox.Width, 40);
             this.passwordTextBox.Size = new Size(this.passwordTextBox.Width, 40);
         }
+
+        private void SwitchFormLabel_Click(object sender, EventArgs e)
+        {
+            SignupForm signupForm = new SignupForm();
+            this.Hide();
+            signupForm.ShowDialog();
+            this.Close();
+        }
     }
 }

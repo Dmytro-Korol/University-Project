@@ -38,8 +38,8 @@ namespace UniversityProject
             var numDay = int.Parse(firstDayOfTheMonth.DayOfWeek.ToString("d"));
 
             numDay = numDay == 0 ? 7 : numDay;
-            for (var i = 1; i < numDay; i++)                            //TO DO "display last days of prev month on free space
-            {                                                           //       instead of blankUserControl"
+            for (var i = 1; i < numDay; i++)                            
+            {                                                           
                 BlankUserControl blank = new BlankUserControl();
                 dayContainer.Controls.Add(blank);
             }

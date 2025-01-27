@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace UniversityProject
 {
-    public partial class SignupForm : Form
+    public partial class EventPlanner : Form
     {
-        public SignupForm()
+        public EventPlanner()
         {
             InitializeComponent();
-
-
-        }
-
-        private void SwitchFormLabel_Click(object sender, EventArgs e)
-        {
-            LoginForm loginForm = new LoginForm();
-            this.Hide();
-            loginForm.ShowDialog();
-            this.Close();
         }
     }
 }

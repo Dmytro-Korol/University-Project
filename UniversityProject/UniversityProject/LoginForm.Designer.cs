@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            SwitchFormLabel = new Label();
             label2 = new Label();
             label3 = new Label();
             usernameTextBox = new TextBox();
@@ -36,16 +36,17 @@
             button1 = new Button();
             SuspendLayout();
             // 
-            // label1
+            // SwitchFormLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(10, 28);
-            label1.Name = "label1";
-            label1.Size = new Size(101, 32);
-            label1.TabIndex = 0;
-            label1.Text = "Sign up";
+            SwitchFormLabel.AutoSize = true;
+            SwitchFormLabel.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            SwitchFormLabel.ForeColor = Color.Transparent;
+            SwitchFormLabel.Location = new Point(10, 28);
+            SwitchFormLabel.Name = "SwitchFormLabel";
+            SwitchFormLabel.Size = new Size(126, 41);
+            SwitchFormLabel.TabIndex = 0;
+            SwitchFormLabel.Text = "Sign up";
+            SwitchFormLabel.Click += SwitchFormLabel_Click;
             // 
             // label2
             // 
@@ -54,7 +55,7 @@
             label2.ForeColor = Color.Transparent;
             label2.Location = new Point(10, 98);
             label2.Name = "label2";
-            label2.Size = new Size(98, 25);
+            label2.Size = new Size(118, 31);
             label2.TabIndex = 1;
             label2.Text = "Username";
             // 
@@ -65,7 +66,7 @@
             label3.ForeColor = Color.Transparent;
             label3.Location = new Point(10, 182);
             label3.Name = "label3";
-            label3.Size = new Size(91, 25);
+            label3.Size = new Size(112, 31);
             label3.TabIndex = 2;
             label3.Text = "Password";
             // 
@@ -75,7 +76,7 @@
             usernameTextBox.Location = new Point(10, 133);
             usernameTextBox.Margin = new Padding(3, 2, 3, 2);
             usernameTextBox.Name = "usernameTextBox";
-            usernameTextBox.Size = new Size(373, 29);
+            usernameTextBox.Size = new Size(373, 34);
             usernameTextBox.TabIndex = 3;
             // 
             // passwordTextBox
@@ -84,7 +85,7 @@
             passwordTextBox.Location = new Point(10, 217);
             passwordTextBox.Margin = new Padding(3, 2, 3, 2);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(373, 29);
+            passwordTextBox.Size = new Size(373, 34);
             passwordTextBox.TabIndex = 4;
             passwordTextBox.UseSystemPasswordChar = true;
             // 
@@ -101,7 +102,7 @@
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
             ClientSize = new Size(394, 398);
@@ -110,7 +111,7 @@
             Controls.Add(usernameTextBox);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(SwitchFormLabel);
             Font = new Font("Segoe UI", 9F, FontStyle.Italic);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
@@ -123,7 +124,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label SwitchFormLabel;
         private Label label2;
         private Label label3;
         private TextBox usernameTextBox;

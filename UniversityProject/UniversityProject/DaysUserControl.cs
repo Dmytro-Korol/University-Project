@@ -27,13 +27,11 @@ namespace UniversityProject
         {
             date = ran;
             labelDay.Text = numOfDay.ToString();
-            label1.Text = date.ToString();
             
         }
 
         private void DaysUserControl_Click(object sender, EventArgs e)
         {
-            //label1.Text = "Hello";
             MessageBox.Show($"{date}");
         }
     }
