@@ -19,12 +19,12 @@ namespace UniversityProject
 
         }
 
-        private void SignUpButton_Click(object sender, EventArgs e)
+        private void SwitchFormLabel_Click(object sender, EventArgs e)
         {
-            if(PasswordTextBox.Text != ConfirmPasswordTextBox.Text)
-            {
-
-            }
+            LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Close();
         }
     }
 }
