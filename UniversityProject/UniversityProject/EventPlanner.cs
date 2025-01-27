@@ -12,9 +12,12 @@ namespace UniversityProject
 {
     public partial class EventPlanner : Form
     {
+        DateTime date;
         public EventPlanner()
         {
             InitializeComponent();
+            date = 
+            dateLabel.Text = 
         }
     }
 }
