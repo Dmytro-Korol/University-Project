@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using UniversityProject.Data;
 
 namespace UniversityProject
 {
@@ -28,6 +30,64 @@ namespace UniversityProject
             this.Hide();
             signupForm.ShowDialog();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string enteredUsername = usernameTextBox.Text;
+            string enteredPassword = passwordTextBox.Text;
+            string hashedPasswordfromDb = null!;
+
+            bool isValid = false;   
+            var textboxEmpty = false;
+
+            if (string.IsNullOrEmpty(usernameTextBox.Text))
+            {
+                errorUsername.Text = "Please fill out all fields";
+                errorUsername.Visible = true;
+                textboxEmpty = true;
+            }
+
+            if (string.IsNullOrEmpty(passwordTextBox.Text))
+            {
+                errorPassword.Text = "Please fill out all fields";
+                errorPassword.Visible = true;
+                textboxEmpty = true;
+            }
+
+            if (textboxEmpty)
+            {
+                return;
+            }
+
+            using (AppDbContext db = new AppDbContext())
+            {
+                var user = db.Users.FirstOrDefault(x => x.Name == enteredUsername);
+                if (user != null)
+                {
+                    hashedPasswordfromDb = user.Password;
+                }
+                else
+                {
+                    errorUsername.Text = "Invalid Username!";
+                    errorUsername.Visible = true;
+                    return;
+                }
+
+                isValid = BCrypt.Net.BCrypt.Verify(enteredPassword, hashedPasswordfromDb);
+            }
+
+            if(!isValid)
+            {
+                MessageBox.Show("Incorrect password \nAccess denied");
+                return;
+            }
+            else
+            {
+                MessageBox.Show($"Welcome {enteredUsername}");
+            }
+            
+            
         }
     }
 }

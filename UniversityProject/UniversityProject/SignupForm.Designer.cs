@@ -36,6 +36,9 @@
             SwitchFormLabel = new Label();
             PasswordTextBox = new TextBox();
             label4 = new Label();
+            errorConfirm = new Label();
+            errorUsername = new Label();
+            errorPassword = new Label();
             SuspendLayout();
             // 
             // SignUpButton
@@ -48,6 +51,7 @@
             SignUpButton.TabIndex = 11;
             SignUpButton.Text = "Sign Up";
             SignUpButton.UseVisualStyleBackColor = true;
+            SignUpButton.Click += SignUpButton_Click;
             // 
             // ConfirmPasswordTextBox
             // 
@@ -55,7 +59,7 @@
             ConfirmPasswordTextBox.Location = new Point(9, 318);
             ConfirmPasswordTextBox.Margin = new Padding(3, 2, 3, 2);
             ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
-            ConfirmPasswordTextBox.Size = new Size(373, 34);
+            ConfirmPasswordTextBox.Size = new Size(373, 29);
             ConfirmPasswordTextBox.TabIndex = 10;
             ConfirmPasswordTextBox.UseSystemPasswordChar = true;
             // 
@@ -65,7 +69,7 @@
             usernameTextBox.Location = new Point(11, 144);
             usernameTextBox.Margin = new Padding(3, 2, 3, 2);
             usernameTextBox.Name = "usernameTextBox";
-            usernameTextBox.Size = new Size(373, 34);
+            usernameTextBox.Size = new Size(373, 29);
             usernameTextBox.TabIndex = 9;
             // 
             // label3
@@ -75,7 +79,7 @@
             label3.ForeColor = Color.Transparent;
             label3.Location = new Point(11, 189);
             label3.Name = "label3";
-            label3.Size = new Size(112, 31);
+            label3.Size = new Size(91, 25);
             label3.TabIndex = 8;
             label3.Text = "Password";
             // 
@@ -86,7 +90,7 @@
             label2.ForeColor = Color.Transparent;
             label2.Location = new Point(11, 109);
             label2.Name = "label2";
-            label2.Size = new Size(118, 31);
+            label2.Size = new Size(98, 25);
             label2.TabIndex = 7;
             label2.Text = "Username";
             // 
@@ -97,7 +101,7 @@
             SwitchFormLabel.ForeColor = Color.Transparent;
             SwitchFormLabel.Location = new Point(11, 39);
             SwitchFormLabel.Name = "SwitchFormLabel";
-            SwitchFormLabel.Size = new Size(105, 41);
+            SwitchFormLabel.Size = new Size(85, 32);
             SwitchFormLabel.TabIndex = 6;
             SwitchFormLabel.Text = "Log in";
             SwitchFormLabel.Click += SwitchFormLabel_Click;
@@ -108,7 +112,7 @@
             PasswordTextBox.Location = new Point(11, 229);
             PasswordTextBox.Margin = new Padding(3, 2, 3, 2);
             PasswordTextBox.Name = "PasswordTextBox";
-            PasswordTextBox.Size = new Size(373, 34);
+            PasswordTextBox.Size = new Size(373, 29);
             PasswordTextBox.TabIndex = 12;
             PasswordTextBox.UseSystemPasswordChar = true;
             // 
@@ -119,16 +123,52 @@
             label4.ForeColor = Color.Transparent;
             label4.Location = new Point(9, 276);
             label4.Name = "label4";
-            label4.Size = new Size(202, 31);
+            label4.Size = new Size(166, 25);
             label4.TabIndex = 13;
             label4.Text = "Confirm Password";
             // 
+            // errorConfirm
+            // 
+            errorConfirm.AutoSize = true;
+            errorConfirm.ForeColor = Color.Red;
+            errorConfirm.Location = new Point(12, 349);
+            errorConfirm.Name = "errorConfirm";
+            errorConfirm.Size = new Size(39, 15);
+            errorConfirm.TabIndex = 14;
+            errorConfirm.Text = "label1";
+            errorConfirm.Visible = false;
+            // 
+            // errorUsername
+            // 
+            errorUsername.AutoSize = true;
+            errorUsername.ForeColor = Color.Red;
+            errorUsername.Location = new Point(12, 174);
+            errorUsername.Name = "errorUsername";
+            errorUsername.Size = new Size(39, 15);
+            errorUsername.TabIndex = 15;
+            errorUsername.Text = "label1";
+            errorUsername.Visible = false;
+            // 
+            // errorPassword
+            // 
+            errorPassword.AutoSize = true;
+            errorPassword.ForeColor = Color.Red;
+            errorPassword.Location = new Point(12, 261);
+            errorPassword.Name = "errorPassword";
+            errorPassword.Size = new Size(39, 15);
+            errorPassword.TabIndex = 16;
+            errorPassword.Text = "label1";
+            errorPassword.Visible = false;
+            // 
             // SignupForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
             ClientSize = new Size(394, 454);
+            Controls.Add(errorPassword);
+            Controls.Add(errorUsername);
+            Controls.Add(errorConfirm);
             Controls.Add(label4);
             Controls.Add(PasswordTextBox);
             Controls.Add(SignUpButton);
@@ -156,5 +196,8 @@
         private Label SwitchFormLabel;
         private TextBox PasswordTextBox;
         private Label label4;
+        private Label errorConfirm;
+        private Label errorUsername;
+        private Label errorPassword;
     }
 }
