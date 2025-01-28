@@ -20,5 +20,7 @@ namespace UniversityProject
             date = dayControl.Date();
             dateLabel.Text = date.ToString();
         }
+
+
     }
 }

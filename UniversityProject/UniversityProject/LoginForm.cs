@@ -84,7 +84,10 @@ namespace UniversityProject
             }
             else
             {
-                MessageBox.Show($"Welcome {enteredUsername}");
+                Form1 form1 = new Form1();
+                this.Hide();
+                form1.ShowDialog();
+                this.Close();
             }
             
             
