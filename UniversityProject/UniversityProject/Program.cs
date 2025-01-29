@@ -12,7 +12,7 @@ namespace UniversityProject
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new SignupForm());
+            Application.Run(new Form1());
         }
     }
 }

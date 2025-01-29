@@ -35,6 +35,7 @@
             textBox2 = new TextBox();
             label4 = new Label();
             dateLabel = new Label();
+            dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
@@ -111,12 +112,22 @@
             dateLabel.TabIndex = 6;
             dateLabel.Text = "00.00.0000";
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Time;
+            dateTimePicker1.Location = new Point(465, 225);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.ShowUpDown = true;
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 7;
+            // 
             // EventPlanner
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
             ClientSize = new Size(693, 361);
+            Controls.Add(dateTimePicker1);
             Controls.Add(dateLabel);
             Controls.Add(label4);
             Controls.Add(textBox2);
@@ -140,5 +151,6 @@
         private TextBox textBox2;
         private Label label4;
         private Label dateLabel;
+        private DateTimePicker dateTimePicker1;
     }
 }
