@@ -39,6 +39,8 @@
             nextPageButton = new Button();
             prevPageButton = new Button();
             monthYearLabel = new Label();
+            nextPageLabel = new Label();
+            prevPageLabel = new Label();
             SuspendLayout();
             // 
             // label1
@@ -189,12 +191,40 @@
             monthYearLabel.Text = "Month Year";
             monthYearLabel.TextAlign = ContentAlignment.BottomCenter;
             // 
+            // nextPageLabel
+            // 
+            nextPageLabel.AutoSize = true;
+            nextPageLabel.Cursor = Cursors.Hand;
+            nextPageLabel.Font = new Font("Franklin Gothic Medium Cond", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nextPageLabel.ForeColor = Color.Transparent;
+            nextPageLabel.Location = new Point(1218, 450);
+            nextPageLabel.Name = "nextPageLabel";
+            nextPageLabel.Size = new Size(34, 39);
+            nextPageLabel.TabIndex = 11;
+            nextPageLabel.Text = ">";
+            nextPageLabel.Click += nextPageLabel_Click;
+            // 
+            // prevPageLabel
+            // 
+            prevPageLabel.AutoSize = true;
+            prevPageLabel.Cursor = Cursors.Hand;
+            prevPageLabel.Font = new Font("Franklin Gothic Medium Cond", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            prevPageLabel.ForeColor = Color.Transparent;
+            prevPageLabel.Location = new Point(41, 450);
+            prevPageLabel.Name = "prevPageLabel";
+            prevPageLabel.Size = new Size(34, 39);
+            prevPageLabel.TabIndex = 12;
+            prevPageLabel.Text = "<";
+            prevPageLabel.Click += prevPageLabel_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
             ClientSize = new Size(1282, 853);
+            Controls.Add(prevPageLabel);
+            Controls.Add(nextPageLabel);
             Controls.Add(monthYearLabel);
             Controls.Add(prevPageButton);
             Controls.Add(nextPageButton);
@@ -211,6 +241,7 @@
             Text = "Event Planner";
             Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -226,5 +257,7 @@
         private Button nextPageButton;
         private Button prevPageButton;
         private Label monthYearLabel;
+        private Label nextPageLabel;
+        private Label prevPageLabel;
     }
 }

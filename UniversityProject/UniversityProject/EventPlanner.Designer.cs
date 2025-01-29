@@ -35,7 +35,8 @@
             textBox2 = new TextBox();
             label4 = new Label();
             dateLabel = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker = new DateTimePicker();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -45,7 +46,7 @@
             label1.ForeColor = Color.Transparent;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(693, 31);
+            label1.Size = new Size(387, 41);
             label1.TabIndex = 0;
             label1.Text = "Create event";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -97,9 +98,9 @@
             label4.ForeColor = Color.Transparent;
             label4.Location = new Point(10, 253);
             label4.Name = "label4";
-            label4.Size = new Size(130, 25);
+            label4.Size = new Size(166, 31);
             label4.TabIndex = 5;
-            label4.Text = "Date and time";
+            label4.Text = "Date and time:";
             // 
             // dateLabel
             // 
@@ -112,22 +113,44 @@
             dateLabel.TabIndex = 6;
             dateLabel.Text = "00.00.0000";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Time;
-            dateTimePicker1.Location = new Point(465, 225);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.ShowUpDown = true;
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 7;
+            dateTimePicker.CalendarForeColor = Color.FromArgb(25, 25, 26);
+            dateTimePicker.CalendarMonthBackground = Color.FromArgb(25, 25, 26);
+            dateTimePicker.CalendarTitleBackColor = Color.FromArgb(25, 25, 26);
+            dateTimePicker.CalendarTitleForeColor = Color.FromArgb(25, 25, 26);
+            dateTimePicker.CalendarTrailingForeColor = Color.FromArgb(25, 25, 26);
+            dateTimePicker.CustomFormat = "H m";
+            dateTimePicker.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            dateTimePicker.Format = DateTimePickerFormat.Custom;
+            dateTimePicker.ImeMode = ImeMode.NoControl;
+            dateTimePicker.Location = new Point(302, 343);
+            dateTimePicker.Name = "dateTimePicker";
+            dateTimePicker.RightToLeft = RightToLeft.No;
+            dateTimePicker.ShowUpDown = true;
+            dateTimePicker.Size = new Size(73, 30);
+            dateTimePicker.TabIndex = 7;
+            dateTimePicker.Value = new DateTime(2025, 1, 28, 0, 0, 0, 0);
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            button1.Location = new Point(265, 434);
+            button1.Name = "button1";
+            button1.Size = new Size(110, 35);
+            button1.TabIndex = 8;
+            button1.Text = "Create";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // EventPlanner
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
-            ClientSize = new Size(693, 361);
-            Controls.Add(dateTimePicker1);
+            ClientSize = new Size(387, 481);
+            Controls.Add(button1);
+            Controls.Add(dateTimePicker);
             Controls.Add(dateLabel);
             Controls.Add(label4);
             Controls.Add(textBox2);
@@ -151,6 +174,7 @@
         private TextBox textBox2;
         private Label label4;
         private Label dateLabel;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker;
+        private Button button1;
     }
 }

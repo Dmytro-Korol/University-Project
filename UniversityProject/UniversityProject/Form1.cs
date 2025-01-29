@@ -38,8 +38,8 @@ namespace UniversityProject
             var numDay = int.Parse(firstDayOfTheMonth.DayOfWeek.ToString("d"));
 
             numDay = numDay == 0 ? 7 : numDay;
-            for (var i = 1; i < numDay; i++)                            
-            {                                                           
+            for (var i = 1; i < numDay; i++)
+            {
                 BlankUserControl blank = new BlankUserControl();
                 dayContainer.Controls.Add(blank);
             }
@@ -71,10 +71,26 @@ namespace UniversityProject
         {
             Rectangle screenBounds = Screen.PrimaryScreen.Bounds;
 
-            int minWidth = Math.Max((int)(screenBounds.Width), 800);  
-            int minHeight = Math.Max((int)(screenBounds.Height), 600); 
+            int minWidth = Math.Max((int)(screenBounds.Width), 800);
+            int minHeight = Math.Max((int)(screenBounds.Height), 600);
 
             this.MinimumSize = new Size(minWidth, minHeight);
+        }
+
+        private void nextPageLabel_Click(object sender, EventArgs e)
+        {
+            dayContainer.Controls.Clear();
+            month++;
+            if (month > 12) { year++; month = 1; }
+            DisplayDays();
+        }
+
+        private void prevPageLabel_Click(object sender, EventArgs e)
+        {
+            dayContainer.Controls.Clear();
+            month--;
+            if (month < 1) { year--; month = 12; }
+            DisplayDays();
         }
     }
 }

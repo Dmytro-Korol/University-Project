@@ -13,6 +13,8 @@ namespace UniversityProject
 {
     public partial class DaysUserControl : UserControl
     {
+        public DateTime Date {  get; set; }
+
         public DaysUserControl()
         {
             InitializeComponent();
@@ -22,22 +24,17 @@ namespace UniversityProject
         {
 
         }
-        public DateTime date;
         public void Days(int numOfDay, DateTime ran)
         {
-            date = ran;
+            Date = ran;
             labelDay.Text = numOfDay.ToString();
-        }
-
-        public DateTime Date()
-        {
-            return date;
         }
 
         private void DaysUserControl_Click(object sender, EventArgs e)
         {
             //MessageBox.Show($"{date}");
             EventPlanner eventPlanner = new EventPlanner();
+            eventPlanner.GetDate(Date);
             eventPlanner.ShowDialog();
         }
     }
