@@ -37,6 +37,9 @@ namespace UniversityProject
             string username = usernameTextBox.Text;
             string password = PasswordTextBox.Text;
             string confirmPassword = ConfirmPasswordTextBox.Text;
+            errorUsername.Visible = false;
+            errorPassword.Visible = false;
+            errorConfirm.Visible = false;
             var textboxEmpty = false;
 
             if (string.IsNullOrEmpty(usernameTextBox.Text))
@@ -79,18 +82,27 @@ namespace UniversityProject
                 Name = username,
                 Password = hashedPassword,
             };
-
-            using (AppDbContext db = new AppDbContext())
+            try
             {
-                db.Users.Add(user);
-                db.SaveChanges();
+                using (AppDbContext db = new AppDbContext())
+                {
+                    db.Users.Add(user);
+                    db.SaveChanges();
 
-                MessageBox.Show("User regestrated successfully!");
-                usernameTextBox.Clear();
-                PasswordTextBox.Clear();
-                ConfirmPasswordTextBox.Clear();
+                    Form1 form1 = new Form1();
+                    this.Hide();
+                    form1.ShowDialog();
+                    this.Close();
+                    usernameTextBox.Clear();
+                    PasswordTextBox.Clear();
+                    ConfirmPasswordTextBox.Clear();
+                }
             }
-
+            catch(Microsoft.EntityFrameworkCore.DbUpdateException)
+            {
+                errorUsername.Text = "Username already exists!";
+                errorUsername.Visible = true;
+            }
         }
 
     }
