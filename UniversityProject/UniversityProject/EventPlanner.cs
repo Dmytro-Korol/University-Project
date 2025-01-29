@@ -12,13 +12,22 @@ namespace UniversityProject
 {
     public partial class EventPlanner : Form
     {
-        DateTime date;
+        public DateTime Date;
         public EventPlanner()
         {
             InitializeComponent();
-            DaysUserControl dayControl = new DaysUserControl();
-            date = dayControl.Date();
-            dateLabel.Text = date.ToString();
+        }
+
+        public void GetDate(DateTime date)
+        {
+            Date = date;
+            dateTimePicker.Value = Date;
+            dateLabel.Text = date.ToString("d");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
