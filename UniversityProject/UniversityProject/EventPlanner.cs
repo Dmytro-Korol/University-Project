@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniversityProject.Data;
+using UniversityProject.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace UniversityProject
 {
@@ -25,11 +29,36 @@ namespace UniversityProject
             dateLabel.Text = date.ToString("d");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void createButton_Click(object sender, EventArgs e)
         {
-            
+            errorTitle.Visible = false;
+            string title = titleTextBox.Text;
+            string description = descriptonTextBox.Text;
+            DateTime date = dateTimePicker.Value;
+            var userId = Session.LoggedInUserId;
+            MessageBox.Show(userId.ToString());
+            if (string.IsNullOrEmpty(title))
+            {
+                errorTitle.Text = "Plesase enter the title";
+                errorTitle.Visible = true;
+                return;
+            }
+            using (AppDbContext db = new AppDbContext())
+            {
+                var newEvent = new Event
+                {
+                    Title = title,
+                    Description = description,
+                    dateTime = date,
+                    UserId = userId,
+                };
+
+
+                db.Events.Add(newEvent);
+                db.SaveChanges();
+            }
+            MessageBox.Show("Success!");
+
         }
-
-
     }
 }

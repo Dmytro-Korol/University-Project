@@ -1,3 +1,5 @@
+using Microsoft.Identity.Client;
+
 namespace UniversityProject
 {
     internal static class Program
@@ -12,7 +14,7 @@ namespace UniversityProject
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new EventDiscription());
+            Application.Run(new LoginForm());
         }
     }
 }

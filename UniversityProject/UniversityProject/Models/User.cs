@@ -16,6 +16,6 @@ namespace UniversityProject.Models
         public string Name { get; set; } = null!;
         public string Password { get; set; } = null!;
 
-        public ICollection<Event> Events { get; set; } = null!;
+        public ICollection<Event> Events { get; } = new List<Event>();
     }
 }

@@ -70,7 +70,7 @@ namespace UniversityProject
 
             if (PasswordTextBox.Text != ConfirmPasswordTextBox.Text)
             {
-                errorConfirm.Text = "Passwords don't maching";
+                errorConfirm.Text = "Passwords don't match";
                 errorConfirm.Visible = true;
                 return;
             }
@@ -89,9 +89,9 @@ namespace UniversityProject
                     db.Users.Add(user);
                     db.SaveChanges();
 
-                    Form1 form1 = new Form1();
+                    LoginForm loginForm = new LoginForm();
                     this.Hide();
-                    form1.ShowDialog();
+                    loginForm.ShowDialog();
                     this.Close();
                     usernameTextBox.Clear();
                     PasswordTextBox.Clear();

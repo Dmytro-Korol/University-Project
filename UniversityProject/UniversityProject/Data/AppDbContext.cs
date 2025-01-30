@@ -13,6 +13,14 @@ namespace UniversityProject.Data
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Event> Events { get; set; } = null!;
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Event>()
+                .HasOne(e => e.User)
+                .WithMany(e => e.Events)
+                .HasForeignKey(e => e.UserId)
+                .IsRequired();
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

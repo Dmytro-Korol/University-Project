@@ -23,6 +23,7 @@ namespace UniversityProject
             this.usernameTextBox.Size = new Size(this.usernameTextBox.Width, 40);
             this.passwordTextBox.Size = new Size(this.passwordTextBox.Width, 40);
         }
+        public int userId;
 
         private void SwitchFormLabel_Click(object sender, EventArgs e)
         {
@@ -66,6 +67,7 @@ namespace UniversityProject
                 if (user != null)
                 {
                     hashedPasswordfromDb = user.Password;
+                    Session.LoggedInUserId = user.Id;
                 }
                 else
                 {

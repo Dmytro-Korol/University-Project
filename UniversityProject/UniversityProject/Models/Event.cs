@@ -14,6 +14,7 @@ namespace UniversityProject.Models
         public string Description { get; set; } = null!;
         public DateTime dateTime { get; set; }
 
+        public int UserId { get; set; }
         public User User { get; set; } = null!;
     }
 }
