@@ -31,7 +31,7 @@ namespace UniversityProject
                 eventsFlowLayoutPanel.Controls.Add(eventControl);
             }
 
-            if(Session.UserEvents != null)
+            if(Session.UserEvents.Count != 0)
             {
                 messageLabel.Visible = false;
             }
