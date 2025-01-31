@@ -12,30 +12,56 @@ namespace UniversityProject
 {
     public partial class EventDiscription : Form
     {
+        private EventsUserControl lastClicked = null!;
         public EventDiscription()
         {
             InitializeComponent();
             DisplayEvents();
+            dateLabel.Visible = false;
         }
-
         private void DisplayEvents()
         {
-            var test = true;
-            if (!test)
+            eventsFlowLayoutPanel.Controls.Clear();
+
+            foreach (var ev in Session.UserEvents)
             {
-                return;
+                EventsUserControl eventControl = new EventsUserControl();
+                eventControl.SetEventData(ev);
+                eventControl.Click += UserControl_Click!;
+                eventsFlowLayoutPanel.Controls.Add(eventControl);
             }
-            else
+
+            if(Session.UserEvents != null)
             {
                 messageLabel.Visible = false;
-                for (int i = 0; i < 4; i++)
-                {
-                    EventsUserControl newEvent = new EventsUserControl();
-                    eventsFlowLayoutPanel.Controls.Add(newEvent);
-                }
             }
         }
-            
-        
+        private void UserControl_Click(object sender, EventArgs e)
+        {
+            if (sender is EventsUserControl clickedControl)
+            {
+                titleLabel.Text = clickedControl.title;
+                descriptionLabel.Text = clickedControl.description;
+                dateLabel.Visible = true;
+                dateLabel.Text = clickedControl.date;
+                if (clickedControl != null)
+                    if (lastClicked != null)
+                        lastClicked.BackColor = Color.FromArgb(83, 81, 79);
+                clickedControl!.BackColor = Color.FromArgb(63, 61, 59);
+                lastClicked = clickedControl;
+            }
+        }
+        public void UserControlClicked(EventsUserControl control)
+        {
+            titleLabel.Text = control.title;
+            descriptionLabel.Text = control.description;
+            dateLabel.Visible = true;
+            dateLabel.Text = control.date;
+            if (control != null)
+                if (lastClicked != null)
+                    lastClicked.BackColor = Color.FromArgb(83, 81, 79);
+            control!.BackColor = Color.FromArgb(63, 61, 59);
+            lastClicked = control;
+        }
     }
 }

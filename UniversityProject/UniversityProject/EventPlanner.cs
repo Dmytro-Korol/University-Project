@@ -58,7 +58,29 @@ namespace UniversityProject
                 db.SaveChanges();
             }
             MessageBox.Show("Success!");
+            this.Close();
 
+
+        }
+
+        private void viewEventsButton_Click(object sender, EventArgs e)
+        {
+            DateTime date = dateTimePicker.Value.Date;
+            using (AppDbContext db = new AppDbContext())
+            {
+                Session.UserEvents = db.Events.Where(e => e
+                .UserId == Session.LoggedInUserId ).Where (e => e
+                .dateTime.Date == date)
+                .OrderBy(e => e.dateTime).ToList();
+            }
+
+
+
+
+            EventDiscription eventdiscription = new EventDiscription();
+            this.Hide();
+            eventdiscription.ShowDialog();
+            this.Close();
         }
     }
 }

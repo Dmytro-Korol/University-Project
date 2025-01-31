@@ -67,15 +67,6 @@ namespace UniversityProject
             DisplayDays();
         }
 
-        private void SetAdaptiveMinimumSize()
-        {
-            Rectangle screenBounds = Screen.PrimaryScreen.Bounds;
-
-            int minWidth = Math.Max((int)(screenBounds.Width), 800);
-            int minHeight = Math.Max((int)(screenBounds.Height), 600);
-
-            this.MinimumSize = new Size(minWidth, minHeight);
-        }
 
         private void nextPageLabel_Click(object sender, EventArgs e)
         {

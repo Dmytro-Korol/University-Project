@@ -30,7 +30,7 @@
         {
             titleLabel = new Label();
             label2 = new Label();
-            discriptionLabel = new Label();
+            descriptionLabel = new Label();
             label4 = new Label();
             dateLabel = new Label();
             label5 = new Label();
@@ -42,9 +42,9 @@
             // 
             titleLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
             titleLabel.ForeColor = Color.Transparent;
-            titleLabel.Location = new Point(12, 9);
+            titleLabel.Location = new Point(10, 7);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(375, 41);
+            titleLabel.Size = new Size(328, 31);
             titleLabel.TabIndex = 1;
             titleLabel.Text = "Title";
             titleLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -53,43 +53,42 @@
             // 
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(405, 9);
+            label2.Location = new Point(354, 7);
             label2.Name = "label2";
-            label2.Size = new Size(375, 41);
+            label2.Size = new Size(328, 31);
             label2.TabIndex = 2;
             label2.Text = "Another events";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // discriptionLabel
+            // descriptionLabel
             // 
-            discriptionLabel.BackColor = Color.FromArgb(83, 81, 79);
-            discriptionLabel.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            discriptionLabel.ForeColor = Color.Transparent;
-            discriptionLabel.Location = new Point(12, 119);
-            discriptionLabel.Name = "discriptionLabel";
-            discriptionLabel.Size = new Size(363, 199);
-            discriptionLabel.TabIndex = 3;
-            discriptionLabel.Text = "Discription";
+            descriptionLabel.BackColor = Color.FromArgb(83, 81, 79);
+            descriptionLabel.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            descriptionLabel.ForeColor = Color.Transparent;
+            descriptionLabel.Location = new Point(10, 89);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new Size(318, 149);
+            descriptionLabel.TabIndex = 3;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label4.ForeColor = Color.Transparent;
-            label4.Location = new Point(12, 354);
+            label4.Location = new Point(10, 266);
             label4.Name = "label4";
-            label4.Size = new Size(166, 31);
+            label4.Size = new Size(134, 25);
             label4.TabIndex = 6;
             label4.Text = "Date and time:";
             // 
             // dateLabel
             // 
             dateLabel.AutoSize = true;
-            dateLabel.Font = new Font("Segoe UI Semibold", 10.2000008F, FontStyle.Bold);
+            dateLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             dateLabel.ForeColor = Color.Transparent;
-            dateLabel.Location = new Point(205, 360);
+            dateLabel.Location = new Point(159, 269);
             dateLabel.Name = "dateLabel";
-            dateLabel.Size = new Size(149, 25);
+            dateLabel.Size = new Size(134, 21);
             dateLabel.TabIndex = 7;
             dateLabel.Text = "00.00.0000 00:00";
             // 
@@ -98,9 +97,9 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label5.ForeColor = Color.Transparent;
-            label5.Location = new Point(12, 79);
+            label5.Location = new Point(10, 59);
             label5.Name = "label5";
-            label5.Size = new Size(134, 31);
+            label5.Size = new Size(108, 25);
             label5.TabIndex = 8;
             label5.Text = "Description";
             // 
@@ -108,9 +107,10 @@
             // 
             eventsFlowLayoutPanel.AutoScroll = true;
             eventsFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;
-            eventsFlowLayoutPanel.Location = new Point(415, 53);
+            eventsFlowLayoutPanel.Location = new Point(363, 40);
+            eventsFlowLayoutPanel.Margin = new Padding(3, 2, 3, 2);
             eventsFlowLayoutPanel.Name = "eventsFlowLayoutPanel";
-            eventsFlowLayoutPanel.Size = new Size(375, 416);
+            eventsFlowLayoutPanel.Size = new Size(328, 312);
             eventsFlowLayoutPanel.TabIndex = 9;
             eventsFlowLayoutPanel.WrapContents = false;
             // 
@@ -118,27 +118,28 @@
             // 
             messageLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
             messageLabel.ForeColor = Color.Transparent;
-            messageLabel.Location = new Point(490, 183);
+            messageLabel.Location = new Point(429, 137);
             messageLabel.Name = "messageLabel";
-            messageLabel.Size = new Size(234, 135);
+            messageLabel.Size = new Size(205, 101);
             messageLabel.TabIndex = 10;
             messageLabel.Text = "You don`t have another events";
             messageLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // EventDiscription
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
-            ClientSize = new Size(792, 481);
+            ClientSize = new Size(693, 361);
             Controls.Add(messageLabel);
             Controls.Add(eventsFlowLayoutPanel);
             Controls.Add(label5);
             Controls.Add(dateLabel);
             Controls.Add(label4);
-            Controls.Add(discriptionLabel);
+            Controls.Add(descriptionLabel);
             Controls.Add(label2);
             Controls.Add(titleLabel);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "EventDiscription";
             Text = "EventDiscription";
             ResumeLayout(false);
@@ -149,7 +150,7 @@
 
         private Label titleLabel;
         private Label label2;
-        private Label discriptionLabel;
+        private Label descriptionLabel;
         private Label label4;
         private Label dateLabel;
         private Label label5;

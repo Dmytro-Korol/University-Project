@@ -74,20 +74,20 @@
             // 
             // usernameTextBox
             // 
-            usernameTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            usernameTextBox.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             usernameTextBox.Location = new Point(10, 129);
             usernameTextBox.Margin = new Padding(3, 2, 3, 2);
             usernameTextBox.Name = "usernameTextBox";
-            usernameTextBox.Size = new Size(373, 29);
+            usernameTextBox.Size = new Size(373, 33);
             usernameTextBox.TabIndex = 3;
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            passwordTextBox.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             passwordTextBox.Location = new Point(10, 212);
             passwordTextBox.Margin = new Padding(3, 2, 3, 2);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(373, 29);
+            passwordTextBox.Size = new Size(373, 33);
             passwordTextBox.TabIndex = 4;
             passwordTextBox.UseSystemPasswordChar = true;
             // 

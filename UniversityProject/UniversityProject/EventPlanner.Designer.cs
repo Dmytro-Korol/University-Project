@@ -38,6 +38,7 @@
             dateTimePicker = new DateTimePicker();
             createButton = new Button();
             errorTitle = new Label();
+            viewEventsButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -155,12 +156,24 @@
             errorTitle.Text = "label1";
             errorTitle.Visible = false;
             // 
+            // viewEventsButton
+            // 
+            viewEventsButton.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            viewEventsButton.Location = new Point(12, 316);
+            viewEventsButton.Name = "viewEventsButton";
+            viewEventsButton.Size = new Size(155, 35);
+            viewEventsButton.TabIndex = 17;
+            viewEventsButton.Text = "View events";
+            viewEventsButton.UseVisualStyleBackColor = true;
+            viewEventsButton.Click += viewEventsButton_Click;
+            // 
             // EventPlanner
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
             ClientSize = new Size(339, 361);
+            Controls.Add(viewEventsButton);
             Controls.Add(errorTitle);
             Controls.Add(createButton);
             Controls.Add(dateTimePicker);
@@ -171,6 +184,7 @@
             Controls.Add(titleTextBox);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             Name = "EventPlanner";
             Text = "EventPlanner";
@@ -190,5 +204,6 @@
         private DateTimePicker dateTimePicker;
         private Button createButton;
         private Label errorTitle;
+        private Button viewEventsButton;
     }
 }
