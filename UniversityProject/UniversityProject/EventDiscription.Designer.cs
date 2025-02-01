@@ -36,6 +36,7 @@
             label5 = new Label();
             eventsFlowLayoutPanel = new FlowLayoutPanel();
             messageLabel = new Label();
+            deleteEvent = new Button();
             SuspendLayout();
             // 
             // titleLabel
@@ -125,12 +126,25 @@
             messageLabel.Text = "You don`t have another events";
             messageLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // deleteEvent
+            // 
+            deleteEvent.Enabled = false;
+            deleteEvent.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            deleteEvent.Location = new Point(10, 314);
+            deleteEvent.Name = "deleteEvent";
+            deleteEvent.Size = new Size(318, 35);
+            deleteEvent.TabIndex = 11;
+            deleteEvent.Text = "Delete current event";
+            deleteEvent.UseVisualStyleBackColor = true;
+            deleteEvent.Click += deleteEvent_Click;
+            // 
             // EventDiscription
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
             ClientSize = new Size(693, 361);
+            Controls.Add(deleteEvent);
             Controls.Add(messageLabel);
             Controls.Add(eventsFlowLayoutPanel);
             Controls.Add(label5);
@@ -156,5 +170,6 @@
         private Label label5;
         private FlowLayoutPanel eventsFlowLayoutPanel;
         private Label messageLabel;
+        private Button deleteEvent;
     }
 }
