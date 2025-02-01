@@ -2,6 +2,8 @@ using System;
 using System.Globalization;
 using System.Drawing;
 using System.Windows.Forms;
+using UniversityProject.Data;
+using UniversityProject.Models;
 
 namespace UniversityProject
 {
@@ -38,6 +40,16 @@ namespace UniversityProject
             var numDay = int.Parse(firstDayOfTheMonth.DayOfWeek.ToString("d"));
 
             numDay = numDay == 0 ? 7 : numDay;
+
+            List<Event> UserEventsAll;
+            using (AppDbContext db = new AppDbContext())
+            {
+                UserEventsAll = db.Events.Where(e => e.UserId == Session.LoggedInUserId 
+                && e.dateTime.Month == month 
+                && e.dateTime.Year == year).ToList();
+            }
+
+
             for (var i = 1; i < numDay; i++)
             {
                 BlankUserControl blank = new BlankUserControl();
@@ -45,8 +57,14 @@ namespace UniversityProject
             }
             for (var i = 1; i < daysInMonth + 1; i++)
             {
+                DateTime currentDate = firstDayOfTheMonth.AddDays(i - 1);
+
                 DaysUserControl day = new DaysUserControl();
-                day.Days(i, firstDayOfTheMonth.AddDays(i - 1));
+                day.Days(i, currentDate);
+
+                int eventCount = UserEventsAll.Count(e => e.dateTime.Date == currentDate.Date);
+                day.SetEventCount(eventCount);
+
                 dayContainer.Controls.Add(day);
             }
         }
@@ -82,6 +100,14 @@ namespace UniversityProject
             month--;
             if (month < 1) { year--; month = 12; }
             DisplayDays();
+        }
+
+        public void LoadEvents()
+        {
+            this.Controls.Clear();
+            InitializeComponent();
+            DisplayDays();
+            this.Refresh();
         }
     }
 }

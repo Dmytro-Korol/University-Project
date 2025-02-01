@@ -36,7 +36,6 @@ namespace UniversityProject
             string description = descriptonTextBox.Text;
             DateTime date = dateTimePicker.Value;
             var userId = Session.LoggedInUserId;
-            MessageBox.Show(userId.ToString());
             if (string.IsNullOrEmpty(title))
             {
                 errorTitle.Text = "Plesase enter the title";
@@ -57,11 +56,15 @@ namespace UniversityProject
                 db.Events.Add(newEvent);
                 db.SaveChanges();
             }
-            MessageBox.Show("Success!");
+            Form1 mainForm = Application.OpenForms.OfType<Form1>().FirstOrDefault()!;
+            if (mainForm != null)
+            {
+                mainForm.LoadEvents();
+            }
             this.Close();
-
-
+            
         }
+
 
         private void viewEventsButton_Click(object sender, EventArgs e)
         {

@@ -24,6 +24,11 @@ namespace UniversityProject
         {
 
         }
+
+        public void SetEventCount(int count)
+        {
+            numberOfEvents.Text = count > 0 ? $"Number of events: {count}" : "";
+        }
         public void Days(int numOfDay, DateTime ran)
         {
             Date = ran;
@@ -32,7 +37,6 @@ namespace UniversityProject
 
         private void DaysUserControl_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show($"{date}");
             EventPlanner eventPlanner = new EventPlanner();
             eventPlanner.GetDate(Date);
             eventPlanner.ShowDialog();

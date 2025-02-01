@@ -15,9 +15,11 @@ namespace UniversityProject
     {
         public EventsUserControl()
         {
+
             InitializeComponent();
-            this.Click += EventsUserControl_Click;
+            this.Click += EventsUserControl_Click!;
         }
+
         public string title { get; set; } = null!;
         public string? description { get; set; } 
         public string date { get; set; } = null!;
@@ -38,5 +40,7 @@ namespace UniversityProject
                 form.UserControlClicked(this);
             }
         }
+
+
     }
 }

@@ -29,27 +29,38 @@
         private void InitializeComponent()
         {
             labelDay = new Label();
+            numberOfEvents = new Label();
             SuspendLayout();
             // 
             // labelDay
             // 
             labelDay.AutoSize = true;
             labelDay.ForeColor = Color.White;
-            labelDay.Location = new Point(19, 19);
+            labelDay.Location = new Point(17, 14);
             labelDay.Name = "labelDay";
-            labelDay.Size = new Size(25, 20);
+            labelDay.Size = new Size(19, 15);
             labelDay.TabIndex = 0;
             labelDay.Text = "00";
             // 
+            // numberOfEvents
+            // 
+            numberOfEvents.AutoSize = true;
+            numberOfEvents.Location = new Point(3, 53);
+            numberOfEvents.Name = "numberOfEvents";
+            numberOfEvents.Size = new Size(38, 15);
+            numberOfEvents.TabIndex = 1;
+            numberOfEvents.Text = "label1";
+            // 
             // DaysUserControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(83, 81, 79);
+            Controls.Add(numberOfEvents);
             Controls.Add(labelDay);
-            Margin = new Padding(10);
+            Margin = new Padding(9, 8, 9, 8);
             Name = "DaysUserControl";
-            Size = new Size(129, 91);
+            Size = new Size(113, 68);
             Load += DaysUserControl_Load;
             Click += DaysUserControl_Click;
             ResumeLayout(false);
@@ -59,5 +70,6 @@
         #endregion
 
         private Label labelDay;
+        private Label numberOfEvents;
     }
 }
