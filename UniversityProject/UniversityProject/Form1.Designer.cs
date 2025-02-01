@@ -41,6 +41,7 @@
             monthYearLabel = new Label();
             nextPageLabel = new Label();
             prevPageLabel = new Label();
+            logOutButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -159,6 +160,7 @@
             // nextPageButton
             // 
             nextPageButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            nextPageButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             nextPageButton.Location = new Point(1176, 812);
             nextPageButton.Name = "nextPageButton";
             nextPageButton.Size = new Size(94, 29);
@@ -170,6 +172,7 @@
             // prevPageButton
             // 
             prevPageButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            prevPageButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             prevPageButton.Location = new Point(1050, 812);
             prevPageButton.Name = "prevPageButton";
             prevPageButton.Size = new Size(94, 29);
@@ -217,12 +220,24 @@
             prevPageLabel.Text = "<";
             prevPageLabel.Click += prevPageLabel_Click;
             // 
+            // logOutButton
+            // 
+            logOutButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            logOutButton.Location = new Point(117, 812);
+            logOutButton.Name = "logOutButton";
+            logOutButton.Size = new Size(94, 29);
+            logOutButton.TabIndex = 13;
+            logOutButton.Text = "Log out";
+            logOutButton.UseVisualStyleBackColor = true;
+            logOutButton.Click += logOutButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
             ClientSize = new Size(1282, 853);
+            Controls.Add(logOutButton);
             Controls.Add(prevPageLabel);
             Controls.Add(nextPageLabel);
             Controls.Add(monthYearLabel);
@@ -259,5 +274,6 @@
         private Label monthYearLabel;
         private Label nextPageLabel;
         private Label prevPageLabel;
+        private Button logOutButton;
     }
 }

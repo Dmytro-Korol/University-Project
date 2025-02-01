@@ -36,32 +36,34 @@
             // 
             labelDay.AutoSize = true;
             labelDay.ForeColor = Color.White;
-            labelDay.Location = new Point(17, 14);
+            labelDay.Location = new Point(19, 19);
             labelDay.Name = "labelDay";
-            labelDay.Size = new Size(19, 15);
+            labelDay.Size = new Size(25, 20);
             labelDay.TabIndex = 0;
             labelDay.Text = "00";
+            labelDay.Click += labelDay_Click;
             // 
             // numberOfEvents
             // 
-            numberOfEvents.AutoSize = true;
-            numberOfEvents.Location = new Point(3, 53);
+            numberOfEvents.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            numberOfEvents.ForeColor = Color.MistyRose;
+            numberOfEvents.Location = new Point(0, 50);
             numberOfEvents.Name = "numberOfEvents";
-            numberOfEvents.Size = new Size(38, 15);
+            numberOfEvents.Size = new Size(129, 41);
             numberOfEvents.TabIndex = 1;
             numberOfEvents.Text = "label1";
+            numberOfEvents.Click += numberOfEvents_Click;
             // 
             // DaysUserControl
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(83, 81, 79);
             Controls.Add(numberOfEvents);
             Controls.Add(labelDay);
-            Margin = new Padding(9, 8, 9, 8);
+            Margin = new Padding(10, 11, 10, 11);
             Name = "DaysUserControl";
-            Size = new Size(113, 68);
-            Load += DaysUserControl_Load;
+            Size = new Size(129, 91);
             Click += DaysUserControl_Click;
             ResumeLayout(false);
             PerformLayout();

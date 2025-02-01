@@ -85,7 +85,9 @@ namespace UniversityProject
                     Session.UserEvents.Remove(eventToDelete);
 
                     DisplayEvents();
-                    MessageBox.Show("Event deleted!");
+                    titleLabel.Text = "Title";
+                    descriptionLabel.Text = "";
+                    dateLabel.Text = "";
 
                     if(Session.UserEvents.Count == 0)
                     {
@@ -97,8 +99,6 @@ namespace UniversityProject
                     {
                         mainForm.LoadEvents();
                     }
-
-                    
                 }
             }
         }

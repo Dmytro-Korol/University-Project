@@ -44,8 +44,8 @@ namespace UniversityProject
             List<Event> UserEventsAll;
             using (AppDbContext db = new AppDbContext())
             {
-                UserEventsAll = db.Events.Where(e => e.UserId == Session.LoggedInUserId 
-                && e.dateTime.Month == month 
+                UserEventsAll = db.Events.Where(e => e.UserId == Session.LoggedInUserId
+                && e.dateTime.Month == month
                 && e.dateTime.Year == year).ToList();
             }
 
@@ -69,7 +69,7 @@ namespace UniversityProject
             }
         }
 
-        private void nextPageButton_Click(object sender, EventArgs e)
+        private void NextPage()
         {
             dayContainer.Controls.Clear();
             month++;
@@ -77,29 +77,33 @@ namespace UniversityProject
             DisplayDays();
         }
 
-        private void prevPageButton_Click(object sender, EventArgs e)
+        private void PrevPage()
         {
             dayContainer.Controls.Clear();
             month--;
             if (month < 1) { year--; month = 12; }
             DisplayDays();
+        }
+
+        private void nextPageButton_Click(object sender, EventArgs e)
+        {
+            NextPage();
+        }
+
+        private void prevPageButton_Click(object sender, EventArgs e)
+        {
+            PrevPage();
         }
 
 
         private void nextPageLabel_Click(object sender, EventArgs e)
         {
-            dayContainer.Controls.Clear();
-            month++;
-            if (month > 12) { year++; month = 1; }
-            DisplayDays();
+            NextPage();
         }
 
         private void prevPageLabel_Click(object sender, EventArgs e)
         {
-            dayContainer.Controls.Clear();
-            month--;
-            if (month < 1) { year--; month = 12; }
-            DisplayDays();
+            PrevPage();
         }
 
         public void LoadEvents()
@@ -108,6 +112,14 @@ namespace UniversityProject
             InitializeComponent();
             DisplayDays();
             this.Refresh();
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            var loginForm = new LoginForm();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Close();
         }
     }
 }

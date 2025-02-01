@@ -76,10 +76,6 @@ namespace UniversityProject
                 .dateTime.Date == date)
                 .OrderBy(e => e.dateTime).ToList();
             }
-
-
-
-
             EventDiscription eventdiscription = new EventDiscription();
             this.Hide();
             eventdiscription.ShowDialog();
