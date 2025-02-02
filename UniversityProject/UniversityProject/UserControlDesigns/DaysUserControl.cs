@@ -56,19 +56,19 @@ namespace UniversityProject
             }
             else
             {
-                if (Date.Month < nowDate.Month)
-                {
-                    var year = nowDate.Year - Date.Year + 1;
-                    MessageBox.Show($"Your event will be create for the {nowDate.AddYears(year)} Year");
-                    EventPlanner eventPlanner = new EventPlanner();
-                    eventPlanner.GetDate(Date.AddYears(year));
-                    eventPlanner.ShowDialog();
-                }
-                else if (Date.Month >= nowDate.Month)
+                if (Date.DayOfYear >= nowDate.DayOfYear)
                 {
                     MessageBox.Show($"Your event will be create for the {nowDate.Year} Year");
                     EventPlanner eventPlanner = new EventPlanner();
                     var year = nowDate.Year - Date.Year;
+                    eventPlanner.GetDate(Date.AddYears(year));
+                    eventPlanner.ShowDialog();
+                }
+                else
+                {
+                    var year = nowDate.Year - Date.Year + 1;
+                    MessageBox.Show($"Your event will be create for the {nowDate.AddYears(year).Year} Year");
+                    EventPlanner eventPlanner = new EventPlanner();
                     eventPlanner.GetDate(Date.AddYears(year));
                     eventPlanner.ShowDialog();
                 }
