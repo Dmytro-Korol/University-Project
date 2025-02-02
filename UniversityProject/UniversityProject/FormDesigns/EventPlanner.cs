@@ -56,7 +56,7 @@ namespace UniversityProject
                 db.Events.Add(newEvent);
                 db.SaveChanges();
             }
-            Form1 mainForm = Application.OpenForms.OfType<Form1>().FirstOrDefault()!;
+            CalendarForm mainForm = Application.OpenForms.OfType<CalendarForm>().FirstOrDefault()!;
             if (mainForm != null)
             {
                 mainForm.LoadEvents();
@@ -76,7 +76,7 @@ namespace UniversityProject
                 .dateTime.Date == date)
                 .OrderBy(e => e.dateTime).ToList();
             }
-            EventDiscription eventdiscription = new EventDiscription();
+            EventDescription eventdiscription = new EventDescription();
             this.Hide();
             eventdiscription.ShowDialog();
             this.Close();

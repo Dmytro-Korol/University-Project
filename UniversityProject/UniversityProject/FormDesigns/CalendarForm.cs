@@ -7,9 +7,9 @@ using UniversityProject.Models;
 
 namespace UniversityProject
 {
-    public partial class Form1 : Form
+    public partial class CalendarForm : Form
     {
-        public Form1()
+        public CalendarForm()
         {
             InitializeComponent();
 

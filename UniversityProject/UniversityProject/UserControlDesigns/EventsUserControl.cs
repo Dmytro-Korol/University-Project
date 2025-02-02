@@ -35,7 +35,7 @@ namespace UniversityProject
 
         private void EventsUserControl_Click(object sender, EventArgs e)
         {
-            if (ParentForm is EventDiscription form)
+            if (ParentForm is EventDescription form)
             {
                 form.UserControlClicked(this);
             }

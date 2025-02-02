@@ -33,13 +33,13 @@ namespace UniversityProject
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LogInButton_Click(object sender, EventArgs e)
         {
             string enteredUsername = usernameTextBox.Text;
             string enteredPassword = passwordTextBox.Text;
             string hashedPasswordfromDb = null!;
 
-            bool isValid = false;   
+            bool isValid = false;
             var textboxEmpty = false;
 
             if (string.IsNullOrEmpty(usernameTextBox.Text))
@@ -79,20 +79,18 @@ namespace UniversityProject
                 isValid = BCrypt.Net.BCrypt.Verify(enteredPassword, hashedPasswordfromDb);
             }
 
-            if(!isValid)
+            if (!isValid)
             {
                 MessageBox.Show("Incorrect password \nAccess denied");
                 return;
             }
             else
             {
-                Form1 form1 = new Form1();
+                CalendarForm form1 = new CalendarForm();
                 this.Hide();
                 form1.ShowDialog();
                 this.Close();
             }
-            
-            
         }
     }
 }

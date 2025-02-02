@@ -11,10 +11,10 @@ using UniversityProject.Data;
 
 namespace UniversityProject
 {
-    public partial class EventDiscription : Form
+    public partial class EventDescription : Form
     {
         private EventsUserControl lastClicked = null!;
-        public EventDiscription()
+        public EventDescription()
         {
             InitializeComponent();
             DisplayEvents();
@@ -94,7 +94,7 @@ namespace UniversityProject
                         deleteEvent.Enabled = false;
                     }
 
-                    Form1 mainForm = Application.OpenForms.OfType<Form1>().FirstOrDefault()!;
+                    CalendarForm mainForm = Application.OpenForms.OfType<CalendarForm>().FirstOrDefault()!;
                     if (mainForm != null)
                     {
                         mainForm.LoadEvents();

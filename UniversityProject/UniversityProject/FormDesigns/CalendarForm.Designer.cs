@@ -1,6 +1,6 @@
 ﻿namespace UniversityProject
 {
-    partial class Form1
+    partial class CalendarForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -196,28 +196,28 @@
             // 
             // nextPageLabel
             // 
-            nextPageLabel.AutoSize = true;
             nextPageLabel.Cursor = Cursors.Hand;
             nextPageLabel.Font = new Font("Franklin Gothic Medium Cond", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             nextPageLabel.ForeColor = Color.Transparent;
-            nextPageLabel.Location = new Point(1218, 450);
+            nextPageLabel.Location = new Point(1189, 121);
             nextPageLabel.Name = "nextPageLabel";
-            nextPageLabel.Size = new Size(34, 39);
+            nextPageLabel.Size = new Size(81, 675);
             nextPageLabel.TabIndex = 11;
             nextPageLabel.Text = ">";
+            nextPageLabel.TextAlign = ContentAlignment.MiddleCenter;
             nextPageLabel.Click += nextPageLabel_Click;
             // 
             // prevPageLabel
             // 
-            prevPageLabel.AutoSize = true;
             prevPageLabel.Cursor = Cursors.Hand;
             prevPageLabel.Font = new Font("Franklin Gothic Medium Cond", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             prevPageLabel.ForeColor = Color.Transparent;
-            prevPageLabel.Location = new Point(41, 450);
+            prevPageLabel.Location = new Point(12, 121);
             prevPageLabel.Name = "prevPageLabel";
-            prevPageLabel.Size = new Size(34, 39);
+            prevPageLabel.Size = new Size(99, 675);
             prevPageLabel.TabIndex = 12;
             prevPageLabel.Text = "<";
+            prevPageLabel.TextAlign = ContentAlignment.MiddleCenter;
             prevPageLabel.Click += prevPageLabel_Click;
             // 
             // logOutButton
@@ -251,12 +251,12 @@
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(label5);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Event Planner";
             Load += Form1_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
