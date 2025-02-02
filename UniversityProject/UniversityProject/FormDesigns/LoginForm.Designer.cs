@@ -36,6 +36,7 @@
             LogInButton = new Button();
             errorUsername = new Label();
             errorPassword = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // SwitchFormLabel
@@ -128,12 +129,24 @@
             errorPassword.Text = "label1";
             errorPassword.Visible = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.ForeColor = Color.Transparent;
+            label1.Location = new Point(170, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(156, 46);
+            label1.TabIndex = 18;
+            label1.Text = "⬅  Go to";
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
             ClientSize = new Size(423, 516);
+            Controls.Add(label1);
             Controls.Add(errorPassword);
             Controls.Add(errorUsername);
             Controls.Add(LogInButton);
@@ -147,7 +160,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Event Planner";
+            Text = "Event Planner(Log in)";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -162,5 +175,6 @@
         private Button LogInButton;
         private Label errorUsername;
         private Label errorPassword;
+        private Label label1;
     }
 }

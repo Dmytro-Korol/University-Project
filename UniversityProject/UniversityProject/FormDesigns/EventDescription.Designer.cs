@@ -138,7 +138,7 @@
             deleteEvent.UseVisualStyleBackColor = true;
             deleteEvent.Click += deleteEvent_Click;
             // 
-            // EventDiscription
+            // EventDescription
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -154,9 +154,9 @@
             Controls.Add(label2);
             Controls.Add(titleLabel);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "EventDiscription";
+            Name = "EventDescription";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "EventDiscription";
+            Text = "EventDescription";
             ResumeLayout(false);
             PerformLayout();
         }

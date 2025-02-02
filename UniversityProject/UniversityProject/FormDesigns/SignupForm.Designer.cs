@@ -39,6 +39,7 @@
             errorConfirm = new Label();
             errorUsername = new Label();
             errorPassword = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // SignUpButton
@@ -161,12 +162,24 @@
             errorPassword.Text = "label1";
             errorPassword.Visible = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.ForeColor = Color.Transparent;
+            label1.Location = new Point(140, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(156, 46);
+            label1.TabIndex = 17;
+            label1.Text = "⬅  Go to";
+            // 
             // SignupForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 26);
             ClientSize = new Size(419, 548);
+            Controls.Add(label1);
             Controls.Add(errorPassword);
             Controls.Add(errorUsername);
             Controls.Add(errorConfirm);
@@ -182,7 +195,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "SignupForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Event Planner";
+            Text = "Event Planner(Sign up)";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -200,5 +213,6 @@
         private Label errorConfirm;
         private Label errorUsername;
         private Label errorPassword;
+        private Label label1;
     }
 }
