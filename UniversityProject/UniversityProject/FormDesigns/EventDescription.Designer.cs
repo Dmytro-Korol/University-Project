@@ -54,11 +54,11 @@
             // 
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(405, 9);
+            label2.Location = new Point(415, 9);
             label2.Name = "label2";
             label2.Size = new Size(375, 41);
             label2.TabIndex = 2;
-            label2.Text = "Another events";
+            label2.Text = "Events";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // descriptionLabel
@@ -122,7 +122,7 @@
             messageLabel.Name = "messageLabel";
             messageLabel.Size = new Size(234, 135);
             messageLabel.TabIndex = 10;
-            messageLabel.Text = "You don`t have another events";
+            messageLabel.Text = "You don`t have events";
             messageLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // deleteEvent
